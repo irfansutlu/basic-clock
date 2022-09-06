@@ -22,19 +22,28 @@ body{
 }
 .container p{
     font-size: 4rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 .clock{
-    border: 5px solid #533483;
+    border: 1rem solid #533483;
     padding: 5rem;
     font-family: 'Press Start 2P', cursive;
     font-size: 4rem;
     border-radius: 5px;
+    background-color: bisque;
 }
 .date{
     font-family: 'Alfa Slab One', cursive;
     color: #E94560;
     font-size: 2rem;
-    letter-spacing: 1rem;
+    letter-spacing: 0.5rem;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+@media (max-width:890px){
+    .container p{
+        display: none;
+    }
 }

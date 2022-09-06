@@ -16,14 +16,32 @@ setInterval(function () {
 }, 1000);
 
 function day(){
-    let currentDay = new Date().getUTCDay() + 4;
+    let currentDate = new Date().getDate();
     let currentMonth = new Date().getUTCMonth() + 1;
     let currentYear = new Date().getUTCFullYear();
 
-    document.getElementById('currentdate').innerHTML=`${currentDay}/${currentMonth}/${currentYear} `
-
-
+    document.getElementById('currentdate').innerHTML=`${currentDate}/${currentMonth}/${currentYear} `
 }
 setInterval(function () {
   day();
+}, 1000);
+
+
+function daysWeek(){
+    let dayOfWeek = [
+      "pazartesi",
+      "salı",
+      "çarşamba",
+      "perşembe",
+      "cuma",
+      "cumartesi",
+      "pazar",
+    ];
+    let currentDays = new Date().getDay();
+    document.getElementById("daytime").innerHTML = `${
+      dayOfWeek[currentDays - 1]
+    }`;
+}
+setInterval(function () {
+  daysWeek();
 }, 1000);
